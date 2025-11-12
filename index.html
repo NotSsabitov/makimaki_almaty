@@ -845,10 +845,10 @@
         <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px; border-radius:14px; border:1px solid rgba(255,255,255,0.03);">
           <h3 style="margin:0 0 8px;">Популярное сегодня</h3>
           <div style="display:flex;gap:12px; align-items:center;">
-            <img src="images/1.png" alt="" style="width:72px;height:72px;object-fit:cover;border-radius:10px;">
+            <img src="images/sets/1.png" alt="Сет Мегахит" style="width:72px;height:72px;object-fit:cover;border-radius:10px;">
             <div>
-              <div style="font-weight:700">Крылышки 8 шт</div>
-              <div class="muted small">Острые куриные крылышки — 2649 ₸</div>
+              <div style="font-weight:700">Сет Мегахит</div>
+              <div class="muted small">Популярный сет с разнообразными роллами</div>
             </div>
           </div>
         </div>
@@ -863,9 +863,11 @@
 
     <div class="menu-categories">
       <button class="category-btn active" data-category="all">Все</button>
-      <button class="category-btn" data-category="wings">Крылышки</button>
-      <button class="category-btn" data-category="snacks">Закуски</button>
-      <button class="category-btn" data-category="salads">Салаты</button>
+      <button class="category-btn" data-category="sets">Сеты</button>
+      <button class="category-btn" data-category="pizza">Пицца</button>
+      <button class="category-btn" data-category="sushi">Суши</button>
+      <button class="category-btn" data-category="fastfood">Фастфуд</button>
+      <button class="category-btn" data-category="drinks">Напитки</button>
     </div>
 
     <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
@@ -1054,21 +1056,110 @@
      * Menu data (updated)
      *********************/
     const menuItems = [
-      // Крылышки
-      { id: 1, name: "Крылышки 8 шт", description: "Острые куриные крылышки", price: 2649, priceDisplay: "2649 ₸", category: "wings", image: "images/1.png" },
-      { id: 2, name: "Крылышки 16 шт", description: "Острые куриные крылышки", price: 4890, priceDisplay: "4890 ₸", category: "wings", image: "images/2.png" },
-      { id: 3, name: "Крылышки 25 шт", description: "Острые куриные крылышки", price: 6990, priceDisplay: "6990 ₸", category: "wings", image: "images/6.png" },
+      // Сеты
+      { id: 1, name: "Сет Мегахит", description: "Популярный сет с разнообразными роллами", price: 0, priceDisplay: "Цена уточняется", category: "sets", image: "images/sets/1.png" },
+      { id: 2, name: "Сет Акира", description: "🍕 Пепперони 🍣 Цезарь запеченный 10 шт 🍣 Цезарь классика 20 шт 🍗Крылышки 16 шт 🎁 Coca Cola 1л в подарок", price: 8990, priceDisplay: "8990 ₸", category: "sets", image: "images/sets/2.png" },
+      { id: 3, name: "Сет Бомба", description: "🍣 Филадельфия 10шт 🍣 Калифорния 10шт 🍣 Цезарь запечённый 20шт 🍣 Фреш ролл 10шт 🍣 Америка 10шт 🍣 Цезарь с помидорами 10шт 🍣 Цезарь с огурцами 10шт 🍣 Чука ролл 10шт 🍣 Каппа маки 10шт 🍕 Пицца 4 сезона 🍕 Пицца Болоньезе 🍕 Пицца Маргарита 🍕 Пицца Пепперони 🍕 Пицца сырная 🎁 Coca Cola 2л в подарок", price: 21890, priceDisplay: "21890 ₸", category: "sets", image: "images/sets/3.png" },
+      { id: 4, name: "Сет Королева", description: "🍱Сет «Королева» - 40шт.суши + пицца «Пепперони» + 8шт. крылышки+фри + Кола 1л в подарок", price: 10390, priceDisplay: "10390 ₸", category: "sets", image: "images/sets/4.png" },
+      { id: 5, name: "Сет Колобок", description: "🍱Сет «КОЛОБОК»- 30шт.суши +пицца Куриная с грибами в сырном соусе + 16шт.крылышки +1л. Coca-Cola", price: 11290, priceDisplay: "11290 ₸", category: "sets", image: "images/sets/5.png" },
+      { id: 6, name: "Сет Рамадан", description: "🍱Сет« Рамадан»- 50шт.суши+3пиццы +16шт.крылышки+ 2л Coca-Cola", price: 16290, priceDisplay: "16290 ₸", category: "sets", image: "images/sets/6.png" },
+      { id: 7, name: "Сет Алматы", description: "🍱Сет «Алматы»- 40шт.суши+ пицца «Пепперони» + 1л Coca-Cola", price: 8490, priceDisplay: "8490 ₸", category: "sets", image: "images/sets/7.png" },
+      { id: 8, name: "Сет Мейірім", description: "Благотворительный сет. От суммы заказа 500 тенге переводится в благотворительный фонд", price: 10990, priceDisplay: "10990 ₸", category: "sets", image: "images/sets/8.png" },
+      { id: 9, name: "Сет Сенсей", description: "🍣Филадельфия 10шт 🍣Цезарь запеченный 10шт 🍣Каппа маки 10шт 🍗Крылышки 8шт 🍕Пицца «Маргарита»", price: 8090, priceDisplay: "8090 ₸", category: "sets", image: "images/sets/9.png" },
+      { id: 10, name: "Сет Мегамикс", description: "🍣 Цезарь запечённый 10 шт 🍣 Лосось темпура 10 шт 🍣 Америка 10 шт 🍣 Цезарь классический 10 шт 🍣 Филадельфия 10 шт 🍣 Бонита 10 шт 🍕 Пицца Маргарита 8 🍕 Пицца Куриная с грибами 🍟 Фри 🎁 Coca Cola 1л", price: 14090, priceDisplay: "14090 ₸", category: "sets", image: "images/sets/10.png" },
+      { id: 11, name: "Сет Ифтар", description: "🍱Сет« Ифтар»- 30шт.суши+2пиццы +16шт.крылышки+ 1л Coca-Cola", price: 12890, priceDisplay: "12890 ₸", category: "sets", image: "images/sets/11.png" },
+      { id: 12, name: "Сет Сенатор", description: "🍱 Сет «СЕНАТОР»-80шт.суши+2пиццы+2л.Coca-Cola", price: 16790, priceDisplay: "16790 ₸", category: "sets", image: "images/sets/12.png" },
+      { id: 13, name: "Сет Даблхит", description: "🍱 Сет «ДАБЛХИТ»- 30шт.суши+фри+пицца Маргарита+1л Coca-Cola", price: 9990, priceDisplay: "9990 ₸", category: "sets", image: "images/sets/13.png" },
+      { id: 14, name: "Сет Студент", description: "🍱Сет «СТУДЕНТ»- 50шт.суши+ пицца Маргарита + 1л.Coca-Cola", price: 9790, priceDisplay: "9790 ₸", category: "sets", image: "images/sets/14.png" },
+      { id: 15, name: "Сет N2", description: "🍱Сет “N2» -30шт.суши + пицца Пепперони + 1л. Coca-Cola", price: 6890, priceDisplay: "6890 ₸", category: "sets", image: "images/sets/15.png" },
+      { id: 16, name: "Сет Фиеста", description: "🍱Сет «ФИЕСТА»-40шт.суши + пицца Маргарита + 1л.Coca Cola", price: 9590, priceDisplay: "9590 ₸", category: "sets", image: "images/sets/16.png" },
+      { id: 17, name: "Сет Биг Бен", description: "🍱Сет «Биг Бен» - 60шт.суши + пицца «Пепперони» + пицца «4 сезона» + Кола 1л в подарок", price: 13990, priceDisplay: "13990 ₸", category: "sets", image: "images/sets/17.png" },
+      { id: 18, name: "Сет Лотос", description: "🍱Сет «ЛОТОС»-20шт.суши + 16шт.крылышки + Фри+ 1л.Coca Cola", price: 9290, priceDisplay: "9290 ₸", category: "sets", image: "images/sets/18.png" },
+      { id: 19, name: "Сет Народный", description: "🍱Сет «НАРОДНЫЙ»- 40шт.суши +пицца Пепперони + 1л.Coca Cola", price: 9690, priceDisplay: "9690 ₸", category: "sets", image: "images/sets/19.png" },
+      { id: 20, name: "Сет Флоренция", description: "🍱Сет «ФЛОРЕНЦИЯ»- 40шт.суши + пицца Маргарита + 1л Coca Cola", price: 9390, priceDisplay: "9390 ₸", category: "sets", image: "images/sets/20.png" },
+      { id: 21, name: "Сет Семейный", description: "🍱Сет «СЕМЕЙНЫЙ»- 40шт.суши + пицца 4 сезона + пицца Маргарита + картофельные шарики+ 1л. Coca-Cola", price: 11690, priceDisplay: "11690 ₸", category: "sets", image: "images/sets/21.png" },
+      { id: 22, name: "Сет Манхеттен", description: "🍱Сет «МАНХЕТТЕН»- 40шт.суши + пицца Маргарита + 1л.Coca Cola", price: 9790, priceDisplay: "9790 ₸", category: "sets", image: "images/sets/22.png" },
+      { id: 23, name: "Сет Фаворит", description: "🍱Сет-«Фаворит» - 30шт.суши +пицца Маргарита+Крылышки 16шт+ 1л Кола", price: 11390, priceDisplay: "11390 ₸", category: "sets", image: "images/sets/23.png" },
+      { id: 24, name: "Сет Император", description: "🍱 Сет «ИМПЕРАТОР»- 100шт.суши +пицца Пепперони + пицца Маргарита + пицца Куриная + 2л.Coca-Cola", price: 18990, priceDisplay: "18990 ₸", category: "sets", image: "images/sets/24.png" },
+      { id: 25, name: "Сет Хан", description: "🍱Сет «ХАН»- 120шт.суши + 6пицц + 2л.Coca-Cola", price: 28390, priceDisplay: "28390 ₸", category: "sets", image: "images/sets/25.png" },
+      { id: 26, name: "Сет Париж", description: "🍣Филадельфия 10шт 🍣Цезарь запеченный 10шт 🍣Цезарь 10шт 🍕Пицца «Маргарита» 🎁 1л Кола в подарок", price: 7090, priceDisplay: "7090 ₸", category: "sets", image: "images/sets/26.png" },
+      { id: 27, name: "Сет Мадрид", description: "🍣Филадельфия 10шт 🍣Цезарь запеченный 10шт 🍣Мини ролл огурец 10шт 🍣Фреш 10шт 🍟Фри 🍕Пицца «Пепперони» 🎁1 л Coca-Cola", price: 7790, priceDisplay: "7790 ₸", category: "sets", image: "images/sets/27.png" },
 
-      // Закуски
-      { id: 4, name: "Куриные наггетсы", description: "Хрустящие куриные наггетсы", price: 1287, priceDisplay: "1287 ₸", category: "snacks", image: "images/3.png" },
-      { id: 5, name: "Корн дог", description: "Сырная сосиска в кукурузной корочке", price: 1411, priceDisplay: "1411 ₸", category: "snacks", image: "images/4.png" },
-      { id: 6, name: "Фри", description: "Картофель фри стандартный", price: 849, priceDisplay: "849 ₸", category: "snacks", image: "images/5.png" },
-      { id: 7, name: "Сырные палочки", description: "Хрустящие сырные палочки", price: 1854, priceDisplay: "1854 ₸", category: "snacks", image: "images/7.png" },
-      { id: 8, name: "Картофельные шарики", description: "Нежные картофельные шарики", price: 1455, priceDisplay: "1455 ₸", category: "snacks", image: "images/8.png" },
+      // Пицца
+      { id: 28, name: "Пицца Мексикано", description: "Острая пицца с мексиканскими ингредиентами", price: 2600, priceDisplay: "2600 ₸", category: "pizza", image: "images/pizza/1.png" },
+      { id: 29, name: "Сырная пицца", description: "Пицца с большим количеством сыра", price: 2400, priceDisplay: "2400 ₸", category: "pizza", image: "images/pizza/2.png" },
+      { id: 30, name: "Пицца с лососем и сыром", description: "Нежная пицца с лососем и сыром", price: 3800, priceDisplay: "3800 ₸", category: "pizza", image: "images/pizza/3.png" },
+      { id: 31, name: "Пицца Цезарь", description: "Пицца с курицей и соусом Цезарь", price: 2700, priceDisplay: "2700 ₸", category: "pizza", image: "images/pizza/4.png" },
+      { id: 32, name: "Грибная пицца", description: "Пицца с грибами и сыром", price: 2300, priceDisplay: "2300 ₸", category: "pizza", image: "images/pizza/5.png" },
+      { id: 33, name: "Пицца Маргарита", description: "Классическая пицца с томатами и моцареллой", price: 2200, priceDisplay: "2200 ₸", category: "pizza", image: "images/pizza/6.png" },
+      { id: 34, name: "Пицца Пепперони", description: "Пицца с острой колбасой пепперони", price: 2500, priceDisplay: "2500 ₸", category: "pizza", image: "images/pizza/7.png" },
+      { id: 35, name: "Пицца 4 сезона", description: "Пицца с четырьмя разными начинками", price: 2800, priceDisplay: "2800 ₸", category: "pizza", image: "images/pizza/8.png" },
+      { id: 36, name: "Куриная пицца", description: "Пицца с курицей и овощами", price: 2500, priceDisplay: "2500 ₸", category: "pizza", image: "images/pizza/9.png" },
+      { id: 37, name: "Пицца Болоньезе", description: "Пицца с мясным соусом болоньезе", price: 2500, priceDisplay: "2500 ₸", category: "pizza", image: "images/pizza/10.png" },
+      { id: 38, name: "Куриная с грибами", description: "Пицца с курицей и грибами", price: 2400, priceDisplay: "2400 ₸", category: "pizza", image: "images/pizza/11.png" },
+      { id: 39, name: "Пицца Деревенская", description: "Пицца с деревенскими ингредиентами", price: 2300, priceDisplay: "2300 ₸", category: "pizza", image: "images/pizza/12.png" },
+      { id: 40, name: "Пицца Чили", description: "Острая пицца с перцем чили", price: 2500, priceDisplay: "2500 ₸", category: "pizza", image: "images/pizza/13.png" },
+      { id: 41, name: "Ветчина с грибами", description: "Пицца с ветчиной и грибами", price: 2400, priceDisplay: "2400 ₸", category: "pizza", image: "images/pizza/14.png" },
+      { id: 42, name: "Куриная с грибами в сырном соусе", description: "Пицца с курицей, грибами и сырным соусом", price: 2600, priceDisplay: "2600 ₸", category: "pizza", image: "images/pizza/15.png" },
 
-      // Салаты
-      { id: 9, name: "Запеченный цезарь", description: "Салат Цезарь с запеченной курицей", price: 2351, priceDisplay: "2351 ₸", category: "salads", image: "images/9.png" },
-      { id: 10, name: "Цезарь", description: "Классический салат Цезарь", price: 1890, priceDisplay: "1890 ₸", category: "salads", image: "images/10.png" }
+      // Фастфуд
+      { id: 43, name: "Картофель фри", description: "Хрустящий картофель фри", price: 990, priceDisplay: "990 ₸", category: "fastfood", image: "images/fastfood/1.png" },
+      { id: 44, name: "Корн дог", description: "Сырная сосиска в кукурузной корочке", price: 1790, priceDisplay: "1790 ₸", category: "fastfood", image: "images/fastfood/2.png" },
+      { id: 45, name: "Картофельные шарики", description: "Нежные картофельные шарики", price: 1400, priceDisplay: "1400 ₸", category: "fastfood", image: "images/fastfood/3.png" },
+      { id: 46, name: "Сырные палочки", description: "Хрустящие сырные палочки", price: 1790, priceDisplay: "1790 ₸", category: "fastfood", image: "images/fastfood/4.png" },
+      { id: 47, name: "Куриные наггетсы", description: "Хрустящие куриные наггетсы", price: 1690, priceDisplay: "1690 ₸", category: "fastfood", image: "images/fastfood/5.png" },
+      { id: 48, name: "Крылышки 8 шт", description: "Острые куриные крылышки", price: 2490, priceDisplay: "2490 ₸", category: "fastfood", image: "images/fastfood/6.png" },
+      { id: 49, name: "Крылышки 16 шт", description: "Острые куриные крылышки", price: 3990, priceDisplay: "3990 ₸", category: "fastfood", image: "images/fastfood/6.png" },
+      { id: 50, name: "Крылышки 25 шт", description: "Острые куриные крылышки", price: 5490, priceDisplay: "5490 ₸", category: "fastfood", image: "images/fastfood/6.png" },
+
+      // Суши
+      { id: 51, name: "Гункан с креветками", description: "Гункан с нежными креветками", price: 1890, priceDisplay: "1890 ₸", category: "sushi", image: "images/sushi/1.png" },
+      { id: 52, name: "Японские пончики «Саше с курицей»", description: "🍣 Японские пончики «Саше с курицей» 🍱 Порция 4 шт", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/2.png" },
+      { id: 53, name: "Роллы «Хотто Маки»", description: "Теплые роллы с разнообразной начинкой", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/3.png" },
+      { id: 54, name: "Роллы «Фреш»", description: "Свежие роллы с овощами", price: 2390, priceDisplay: "2390 ₸", category: "sushi", image: "images/sushi/4.png" },
+      { id: 55, name: "Роллы «Цезарь с помидором»", description: "Роллы с курицей и помидорами", price: 2190, priceDisplay: "2190 ₸", category: "sushi", image: "images/sushi/5.png" },
+      { id: 56, name: "Роллы «Лосось темпура»", description: "Роллы с жареным лососем", price: 2390, priceDisplay: "2390 ₸", category: "sushi", image: "images/sushi/6.png" },
+      { id: 57, name: "Роллы «Эби темпура»", description: "Роллы с жареными креветками", price: 2390, priceDisplay: "2390 ₸", category: "sushi", image: "images/sushi/7.png" },
+      { id: 58, name: "Роллы «Флоренция»", description: "Итальянские роллы с особой начинкой", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/8.png" },
+      { id: 59, name: "Роллы «Америка»", description: "Роллы в американском стиле", price: 2590, priceDisplay: "2590 ₸", category: "sushi", image: "images/sushi/9.png" },
+      { id: 60, name: "Роллы «Имбирь в темпуре»", description: "Роллы с имбирем в кляре", price: 2590, priceDisplay: "2590 ₸", category: "sushi", image: "images/sushi/10.png" },
+      { id: 61, name: "Роллы «Поцелуй Гейши»", description: "Нежные роллы с особым соусом", price: 2590, priceDisplay: "2590 ₸", category: "sushi", image: "images/sushi/11.png" },
+      { id: 62, name: "Роллы «Запеченный цезарь»", description: "Запеченные роллы с курицей", price: 2590, priceDisplay: "2590 ₸", category: "sushi", image: "images/sushi/12.png" },
+      { id: 63, name: "Роллы «Запеченные с лососем»", description: "Запеченные роллы с лососем", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/13.png" },
+      { id: 64, name: "Роллы «Алматинка»", description: "Роллы в алматинском стиле", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/14.png" },
+      { id: 65, name: "Роллы «Фила запечённая»", description: "Запеченные роллы Филадельфия", price: 2790, priceDisplay: "2790 ₸", category: "sushi", image: "images/sushi/15.png" },
+      { id: 66, name: "Роллы запеченные «Чиз эби маки»", description: "Запеченные роллы с креветками и сыром", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/16.png" },
+      { id: 67, name: "Роллы запеченные «Чиз лосось»", description: "Запеченные роллы с лососем и сыром", price: 2090, priceDisplay: "2090 ₸", category: "sushi", image: "images/sushi/17.png" },
+      { id: 68, name: "Роллы запеченные «Чиз угорь»", description: "Запеченные роллы с угрем и сыром", price: 2090, priceDisplay: "2090 ₸", category: "sushi", image: "images/sushi/17.png" },
+      { id: 69, name: "Роллы запеченные «Чиз Крабс»", description: "Запеченные роллы с крабом и сыром", price: 2090, priceDisplay: "2090 ₸", category: "sushi", image: "images/sushi/17.png" },
+      { id: 70, name: "Роллы «Эби Маки»", description: "Роллы с креветками", price: 2090, priceDisplay: "2090 ₸", category: "sushi", image: "images/sushi/18.png" },
+      { id: 71, name: "Роллы «Сютамаки»", description: "Традиционные японские роллы", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/19.png" },
+      { id: 72, name: "Роллы «Кавасаки»", description: "Роллы с жаренным лососем", price: 2390, priceDisplay: "2390 ₸", category: "sushi", image: "images/sushi/20.png" },
+      { id: 73, name: "Роллы «Онигара»", description: "Роллы с особой начинкой", price: 2790, priceDisplay: "2790 ₸", category: "sushi", image: "images/sushi/21.png" },
+      { id: 74, name: "Роллы «Филадельфия Гриль»", description: "Роллы Филадельфия на гриле", price: 2590, priceDisplay: "2590 ₸", category: "sushi", image: "images/sushi/22.png" },
+      { id: 75, name: "Роллы «Фила с крабом»", description: "Роллы Филадельфия с крабом", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/23.png" },
+      { id: 76, name: "Роллы «Филадельфия с креветками»", description: "Роллы Филадельфия с креветками", price: 2990, priceDisplay: "2990 ₸", category: "sushi", image: "images/sushi/24.png" },
+      { id: 77, name: "Роллы «Филадельфия с огурцами»", description: "Роллы Филадельфия с огурцами", price: 2790, priceDisplay: "2790 ₸", category: "sushi", image: "images/sushi/25.png" },
+      { id: 78, name: "Роллы «Филадельфия Люкс»", description: "Роллы Филадельфия премиум класса", price: 3490, priceDisplay: "3490 ₸", category: "sushi", image: "images/sushi/26.png" },
+      { id: 79, name: "Роллы «Филадельфия»", description: "Классические роллы Филадельфия", price: 2290, priceDisplay: "2290 ₸", category: "sushi", image: "images/sushi/27.png" },
+      { id: 80, name: "Роллы «Иоджи»", description: "Традиционные японские роллы", price: 1990, priceDisplay: "1990 ₸", category: "sushi", image: "images/sushi/28.png" },
+      { id: 81, name: "Роллы «Крабс»", description: "Роллы с крабом", price: 2390, priceDisplay: "2390 ₸", category: "sushi", image: "images/sushi/29.png" },
+      { id: 82, name: "Роллы «Ясай»", description: "Вегетарианские роллы с овощами", price: 1990, priceDisplay: "1990 ₸", category: "sushi", image: "images/sushi/30.png" },
+      { id: 83, name: "Роллы «Сливочный угорь»", description: "Роллы с нежным угрем", price: 2490, priceDisplay: "2490 ₸", category: "sushi", image: "images/sushi/31.png" },
+      { id: 84, name: "Роллы «Калифорния Green»", description: "Роллы Калифорния с зеленью", price: 2190, priceDisplay: "2190 ₸", category: "sushi", image: "images/sushi/32.png" },
+      { id: 85, name: "Роллы «Калифорния»", description: "Классические роллы Калифорния", price: 2190, priceDisplay: "2190 ₸", category: "sushi", image: "images/sushi/33.png" },
+      { id: 86, name: "Роллы «Фьюжн»", description: "Роллы в стиле фьюжн", price: 2390, priceDisplay: "2390 ₸", category: "sushi", image: "images/sushi/34.png" },
+      { id: 87, name: "Роллы «Бонита»", description: "Роллы с тунцом", price: 2190, priceDisplay: "2190 ₸", category: "sushi", image: "images/sushi/35.png" },
+      { id: 88, name: "Роллы «Канада»", description: "Роллы в канадском стиле", price: 3090, priceDisplay: "3090 ₸", category: "sushi", image: "images/sushi/36.png" },
+      { id: 89, name: "Роллы «Аляска»", description: "Роллы с холодными ингредиентами", price: 2390, priceDisplay: "2390 ₸", category: "sushi", image: "images/sushi/37.png" },
+
+      // Напитки
+      { id: 90, name: "Coca-Cola 0.5л", description: "Освежающий газированный напиток", price: 450, priceDisplay: "450 ₸", category: "drinks", image: "images/napitki/1.png" },
+      { id: 91, name: "Coca-Cola 1л", description: "Освежающий газированный напиток", price: 800, priceDisplay: "800 ₸", category: "drinks", image: "images/napitki/2.png" },
+      { id: 92, name: "Fanta 0.5л", description: "Апельсиновый газированный напиток", price: 450, priceDisplay: "450 ₸", category: "drinks", image: "images/napitki/3.png" },
+      { id: 93, name: "Fanta 1л", description: "Апельсиновый газированный напиток", price: 800, priceDisplay: "800 ₸", category: "drinks", image: "images/napitki/4.png" },
+      { id: 94, name: "Sprite 0.5л", description: "Лимонно-лаймовый газированный напиток", price: 450, priceDisplay: "450 ₸", category: "drinks", image: "images/napitki/1.png" },
+      { id: 95, name: "Sprite 1л", description: "Лимонно-лаймовый газированный напиток", price: 800, priceDisplay: "800 ₸", category: "drinks", image: "images/napitki/2.png" }
     ];
 
     /*********************
